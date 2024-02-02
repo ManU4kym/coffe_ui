@@ -66,18 +66,10 @@ class _HomePageState extends State<HomePage> {
               child: ListView(
             scrollDirection: Axis.horizontal,
             children: const [
-              CoffeeTiles(
-                image: 'Images/Coffee2.jpg',
-              ),
-              CoffeeTiles(
-                image: 'Images/Coffee3.jpg',
-              ),
-              CoffeeTiles(
-                image: 'Images/Coffee4.jpg',
-              ),
-              CoffeeTiles(
-                image: 'Images/Coffee1.jpg',
-              ),
+             CoffeeTiles(
+               image: 'Images/Coffee1.jpg',
+
+             )
             ],
           ))
         ],
