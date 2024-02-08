@@ -22,7 +22,7 @@ A simple and elegant Flutter app that provides a delightful user interface for e
 
 ## Screenshots
 
-![Screenshot 1](flutter_01.png)
+![Screenshot 1](flutter_04.png)
 *Caption for the first screenshot.*
 
 ![Screenshot 2](flutter_03.png)
