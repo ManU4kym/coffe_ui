@@ -1,3 +1,5 @@
+import 'dart:core';
+import 'package:coffee_ui/utils/coffee_type.dart';
 import 'package:coffee_ui/utils/tiles_coffee.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,6 +12,34 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final List coffeeType = [
+    [
+      'cappucino',
+      true,
+    ],
+    [
+      'Latte',
+      false,
+    ],
+    [
+      'Black',
+      true,
+    ],
+    [
+      'Strungi',
+      false,
+    ],
+  ];
+
+  void coffeeTypeSelected(index) {
+    setState(() {
+      for( int i= 0; i < coffeeType.length; i ++ ){
+        coffeeType[index][0] = false;
+      }
+      coffeeType[index][0] = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,20 +86,40 @@ class _HomePageState extends State<HomePage> {
                     Icons.search,
                     color: Colors.orange,
                   ),
-                  hintText: 'Coffee search..'),
+                  hintText: 'Coffee  search..'),
             ),
           ),
           const SizedBox(
             height: 25,
           ),
+          Container(
+            height: 50,
+            child: ListView.builder(
+                itemCount: coffeeType.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (
+                  context,
+                  index,
+                ) {
+                  return CoffeeType(
+                    coffeeType: coffeeType[index][0],
+                    isSelected: coffeeType[index][1],
+                    onTap: (){
+                      coffeeTypeSelected(index);
+                    },
+                  );
+                }),
+          ),
           Expanded(
               child: ListView(
             scrollDirection: Axis.horizontal,
             children: const [
-             CoffeeTiles(
-               image: 'Images/Coffee1.jpg',
-
-             )
+              CoffeeTiles(
+                image: 'Images/Coffee1.jpg',
+              ),
+              CoffeeTiles(
+                image: 'Images/Coffee1.jpg',
+              ),
             ],
           ))
         ],

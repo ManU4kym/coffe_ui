@@ -11,10 +11,10 @@ class CoffeeTiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 25,  bottom: 0),
+      padding: const EdgeInsets.only(left: 25,  bottom: 0,),
       child: Container(
         padding: const EdgeInsets.all(12),
-        height: 200,
+        height: 150,
         width: 200,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(35),
