@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
   void coffeeTypeSelected(index) {
     setState(() {
       for( int i= 0; i < coffeeType.length; i ++ ){
-        coffeeType[index][0] = false;
+        coffeeType[i][0] = false;
       }
       coffeeType[index][0] = true;
     });
@@ -118,7 +118,10 @@ class _HomePageState extends State<HomePage> {
                 image: 'Images/Coffee1.jpg',
               ),
               CoffeeTiles(
-                image: 'Images/Coffee1.jpg',
+                image: 'Images/Coffee 3.jpg',
+              ),
+              CoffeeTiles(
+                image: 'Images/Coffee 4.jpg',
               ),
             ],
           ))

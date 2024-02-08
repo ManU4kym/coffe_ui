@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CoffeeType extends StatelessWidget {
   final String coffeeType;
-  final bool isSelected;
+  final bool? isSelected;
   final VoidCallback onTap;
   const CoffeeType({
     super.key,
@@ -23,7 +23,7 @@ class CoffeeType extends StatelessWidget {
           style: GoogleFonts.actor(
             fontSize: 18,
             fontWeight: FontWeight.bold,
-            color: isSelected ? Colors.orange : Colors.grey[400],
+            color: isSelected! ? Colors.orange : Colors.grey[400],
           ),
         ),
       ),
